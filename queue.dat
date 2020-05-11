@@ -1,0 +1,22 @@
+
+import 'dart:collection'; 
+void main(){
+ Queue queue = new Queue(); 
+   print("Default implementation ${queue.runtimeType}"); 
+  queue.addAll([10,12,13,14]);
+Iterator i= queue.iterator; 
+  while(i.moveNext()) { 
+      print(i.current); 
+   }
+  queue.addFirst('thiru');
+ 
+   queue.add(10); 
+   queue.add(20); 
+   queue.add(30); 
+   queue.add(40); 
+   queue.addLast("thiru mass");
+   for(var no in queue){ 
+      print(no); 
+   } 
+ 
+}
