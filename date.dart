@@ -28,3 +28,13 @@ int weekNumber(DateTime date) {
   }
   return woy;
 }
+// First day of the week sunday 
+  var d = DateTime.now();
+    var weekDay = d.weekday;
+// First day of the week sunday 
+    var firstDayOfWeek = d.subtract(Duration(days: weekDay ));
+// First day of the week monday 
+//  var firstDayOfWeek = d.subtract(Duration(days: weekDay -1));
+    print(firstDayOfWeek);
+  
+  
