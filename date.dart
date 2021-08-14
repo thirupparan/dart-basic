@@ -36,5 +36,24 @@ int weekNumber(DateTime date) {
 // First day of the week monday 
 //  var firstDayOfWeek = d.subtract(Duration(days: weekDay -1));
     print(firstDayOfWeek);
-  
-  
+
+// get days of the week 
+  List<String> getDaysOfWeek(DateTime currentDay) {
+    var firstDayOfWeek =
+        currentDay.subtract(Duration(days: currentDay.weekday - 1));
+    var list = List.generate(
+        7,
+        (i) => DateFormat('yyyy-MM-dd')
+            .format(firstDayOfWeek.add(Duration(days: i)))).toList();
+    return list;
+  }
+
+//get every next monday date 
+
+DateTime date = DateTime.now();
+   DateTime getDate(DateTime d) => DateTime(d.year, d.month, d.day);
+    final endOfWeek =
+        getDate(date.add(Duration(days: DateTime.daysPerWeek - date.weekday)));
+
+    final nextMonday = endOfWeek.add(Duration(days: 1));
+    print(nextMonday);
